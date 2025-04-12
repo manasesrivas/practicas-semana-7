@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background-color-img-body: rgba(228, 228, 228, 0.167);
+    --background-color-section: rgb(228, 228, 228);
+    --box-shadow-color: rgb(44, 44, 44);
+    --background-footer-color: rgb(25, 25, 25);
+    --height--card-menu: 250px;
+}
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;    
+    margin: 0;
+    outline: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* CARD MENU */
+
+.title{
+    font-size: clamp(1em, 4vw, 3em);
+    text-align: center;
+}
+
+.section--page-main{
+    max-width: 1000px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 10px;
+    margin: 20px auto;
+}
+
+
+
+
+.card--menu{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 600ms ease;
+    border-radius: 5px;
+}
+
+.card--menu::before{
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    transition: background 1s;
+}
+
+
+.card--menu-img{
+    width: 100%;
+}
+
+.card--menu-text{
+    font-size: 0;
+    z-index: 11;
+    position: absolute;
+    bottom: -100%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    transition: bottom 300ms, font-size 700ms;
+}
+
+
+
+.section--gallery{
+    max-width: 1000px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.img--gallery{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    cursor: pointer;
+}
+
+.section--video{
+    max-width: 1100px;
+}
+
+
+video{
+    width: 90%;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    border-radius: 15px;
+}
+
+.section--musica{
+    max-width: 500px;
+}
+
+.section--musica{
+    background-color: var(--background-color-section);
+}
+
+audio{
+    max-width: 300px;
+    width: 90%;
+}
+
+
+.section--musica, .section--video, .section--frase-motivadora{
+    padding: 20px;
+    width: 80%;
+    margin:10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.background-frase-motivadora{
+    background: linear-gradient(var(--background-color-img-body)), url("../media/img/urban-vintage-78A265wPiO4-unsplash.jpg");
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.poster{
+    aspect-ratio: 2/2;
+    width: 70%;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    border-radius: 10px;
+}
+
+
+
+.card--frase-motivadora{
+    background-color: var(--background-color-section);
+    max-width: 500px;
+    width: 90%;
+    aspect-ratio: 2/2;
+    display: grid;
+    place-items: center;
+}
+
+.card--paragraph{
+    line-height: 1.5em;
+    text-align: center;
+    font-size: clamp(0.5em, 3vw, 1.3em); /* tamaño minimo, tamaño ideal, tamaño maximo*/
+    font-style: italic;
+    padding: 1em;
+}
+
+
+footer{
+    background-color: var(--background-footer-color);
+    padding: 30px 0 0 0;
+    width: 100%;
+    color: white;
+}
+
+.p-credits{
+    margin: 30px 0 10px 10px;
+}
+
+.menu--list{
+    margin: 10px;
+    display: flex;
+    flex-wrap:wrap ;
+    gap: 2em;
+    list-style: none;
+}
+
+.menu--list li .menu--list-pwd{
+    border-bottom: rgb(221, 0, 255) 2px solid;
+    color: white;
+    pointer-events: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: rgb(156, 156, 156);
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+svg path:hover{
+    fill: white;
+}
+
+@media (width < 800px){
+    .animate{
+        transform: perspective(500px) rotateX(10deg);
+    }
+    
+    .gradient::before{
+        background: linear-gradient(to top, black, rgba(0, 0, 0, 0.392), transparent)
+    }
+    .show{
+        bottom: 30%;
+        font-size: clamp(1.2em, 3vw, 1em);
+    }
+}
+
+@media (width > 800px) {
+    
+    
+    .card--menu:hover{
+        transform: perspective(500px) rotateX(10deg);
+    }
+    .card--menu:hover::before{
+        background: linear-gradient(to top, black, rgba(0, 0, 0, 0.392), transparent)
+    }
+    .card--menu:hover > .text-float{
+        bottom: 30%;
+        font-size: 1.9em;
+    }
+}
