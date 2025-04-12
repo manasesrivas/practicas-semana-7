@@ -40,9 +40,6 @@ body{
     margin: 20px auto;
 }
 
-
-
-
 .card--menu{
     width: 100%;
     position: relative;
@@ -77,7 +74,7 @@ body{
     transition: bottom 300ms, font-size 700ms;
 }
 
-
+/* GALLERY */
 
 .section--gallery{
     max-width: 1000px;
@@ -95,6 +92,8 @@ body{
     cursor: pointer;
 }
 
+/* VIDEO */
+
 .section--video{
     max-width: 1100px;
 }
@@ -105,6 +104,8 @@ video{
     box-shadow: 0 0 10px var(--box-shadow-color);
     border-radius: 15px;
 }
+
+/* MUSICA */
 
 .section--musica{
     max-width: 500px;
@@ -133,17 +134,19 @@ audio{
 
 
 
-.background-frase-motivadora{
-    background: linear-gradient(var(--background-color-img-body)), url("../media/img/urban-vintage-78A265wPiO4-unsplash.jpg");
-    background-position: center bottom;
-    background-size: cover;
-}
-
 .poster{
     aspect-ratio: 2/2;
     width: 70%;
     box-shadow: 0 0 10px var(--box-shadow-color);
     border-radius: 10px;
+}
+
+/* FRASE MOTIVADORA */
+
+.background-frase-motivadora{
+    background: linear-gradient(var(--background-color-img-body)), url("../media/img/urban-vintage-78A265wPiO4-unsplash.jpg");
+    background-position: center bottom;
+    background-size: cover;
 }
 
 
@@ -165,6 +168,7 @@ audio{
     padding: 1em;
 }
 
+/* footer */
 
 footer{
     background-color: var(--background-footer-color);
@@ -177,7 +181,9 @@ footer{
     margin: 30px 0 10px 10px;
 }
 
-.menu--list{
+/* MENU LIST */
+
+.menu--list {
     margin: 10px;
     display: flex;
     flex-wrap:wrap ;
@@ -191,12 +197,12 @@ footer{
     pointer-events: none;
 }
 
-.menu li a{
+.menu--list li a{
     text-decoration: none;
     color: rgb(156, 156, 156);
 }
 
-.menu li a:hover{
+.menu--list li a:hover{
     color: white;
 }
 
@@ -227,7 +233,7 @@ svg path:hover{
     .card--menu:hover::before{
         background: linear-gradient(to top, black, rgba(0, 0, 0, 0.392), transparent)
     }
-    .card--menu:hover > .text-float{
+    .card--menu:hover > .card--menu-text{
         bottom: 30%;
         font-size: 1.9em;
     }
